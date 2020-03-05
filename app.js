@@ -62,8 +62,7 @@ class Team {
                     this.engineerPrompt()
                 } else if (val.type === "no") {
                     this.renderList()
-                }
-                 else {
+                } else {
                     this.addNewMember()
                 }
             });
@@ -126,7 +125,7 @@ class Team {
                 this.addNewMember()
             });
     };
-    
+
     renderList() {
         fs.writeFile(outputPath, render(this.team), function (err) {
             if (err) {
@@ -137,6 +136,5 @@ class Team {
     };
 };
 
-var team = new Team();
-
+let team = new Team();
 team.start();
